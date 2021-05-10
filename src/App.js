@@ -4,6 +4,7 @@ import {
   Route
 } from 'react-router-dom';
 import Home from './views/Home';
+import About from './views/About';
 import './assets/css/Main.css';
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/about">
+          <About />
         </Route>
       </Switch>
     </Router>
