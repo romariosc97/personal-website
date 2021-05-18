@@ -7,12 +7,11 @@ import HomeRomario from'../assets/img/home-romario.png';
 import FloatingToTop from "../components/FloatingToTop";
 
 function Home() {
+    useEffect(() => {
 
-  useEffect(() => {
+    }, []);
 
-  }, []);
-
-  return (
+    return (
     <div>
         <Navbar />
         <Box backgroundColor="#F9F7F7">
@@ -33,7 +32,7 @@ function Home() {
         <FloatingToTop />
         <Footer />
     </div>
-  )
+    )
 }
 
 export default Home;

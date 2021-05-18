@@ -12,10 +12,10 @@ function Footer() {
 
   return (
     <div>
-        <Box className="shadow" bg="#112D4E" w="100%" px={{base: '1rem', sm: '2rem', lg:'10rem'}} py={{base: '1rem', sm: '2rem', lg: '2rem'}} color="#DBE2EF" display="flex" flexDirection="row" justifyContent="space-between">
+        <Box className="shadow" bg="#112D4E" w="100%" px={{base: '1rem', sm: '2rem', lg:'10rem'}} py={{base: '1rem', sm: '2rem', lg: '3rem'}} color="#DBE2EF" display="flex" flexDirection="row" justifyContent="space-between">
             <Box flex="1 1 0px" pr="8rem">
                 <Text fontWeight="700" fontSize="xl" pb="0.5rem">About</Text>
-                <Text fontWeight="300" fontSize="md" textAlign="justify" paddingY="0.5rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, nisi ad ab, nemo ratione, id soluta aspernatur nulla minus sit magnam. Corporis ipsam eaque reprehenderit quod quisquam.</Text>
+                <Text fontWeight="300" fontSize="md" textAlign="justify" paddingY="0.5rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, nisi ad ab, nemo ratione, id soluta aspernatur nulla minus sit magnam. Corporis ipsam eaque reprehenderit.</Text>
             </Box>
             <Box flex="1 1 0px" pr="8rem" fontSize="md">
                 <Text fontWeight="700" fontSize="xl" pb="0.5rem">Contact</Text>
