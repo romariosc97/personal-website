@@ -38,8 +38,8 @@ function Blog() {
                                         <Box className="overlay-blog">
                                             <Image rounded="lg" height="400px" width="100%" objectFit="cover" src={process.env.PUBLIC_URL + "/blog/" + v.image} alt={v.title}/>
                                             <Box className="text fadeIn-bottom" display="flex" alignItems="center" justifyContent="flex-end" flexDirection="column">
-                                                <Text alignSelf="end" fontSize="xl" fontWeight="500" px="1.5rem" textTransform="uppercase" color="#FFF">{v.title}</Text>
-                                                <Text alignSelf="end" textAlign="justify" mb="0.5rem" fontSize="md" fontWeight="300" px="1.5rem" color="#FFF">{v.description}</Text>
+                                                <Text alignSelf="end" fontSize="xl" fontWeight="500" px="2rem" textTransform="uppercase" color="#FFF">{v.title}</Text>
+                                                <Text className="description" alignSelf="end" textAlign="justify" fontSize="md" fontWeight="300" px="2rem" color="#FFF">{v.description}</Text>
                                                 <Link className="blue-button-outline button-sm" to={"/blog/" + v.id}>
                                                     READ MORE
                                                 </Link>

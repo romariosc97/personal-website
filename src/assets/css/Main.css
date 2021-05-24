@@ -209,6 +209,14 @@ html{
     transition: .5s ease;
     box-shadow: 0 25px 55px rgb(253 71 102 / 22%);
 }
+.overlay-blog .text .description{
+    transition: all .5s ease;
+    margin-bottom: -30px;
+}
+.overlay-blog:hover .text .description{
+    margin-bottom: 10px;
+}
+
 
 .overlay-blog:before,
 .overlay-blog:after
@@ -246,16 +254,15 @@ html{
     box-shadow: 0 25px 55px rgb(253 71 102 / 22%);
 }
 .overlay-blog .text a{
-    transition: all 0.5s ease-in-out;
+    transition: all 0.25s ease-in-out;
     font-size: 0.75rem;
     padding: 0.5rem 1.25rem;
     font-weight: 300;
     color: #F9F7F7;
     border: 1px solid #F9F7F7;
     align-self: flex-start;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    max-height: 0px;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
     opacity: 0;
 }
 .overlay-blog:hover a:hover{
@@ -264,7 +271,6 @@ html{
 }
 .overlay-blog:hover a{
     border: 1px solid #F9F7F7;
-    max-height: 200px;
     opacity: 1;
 }
 
@@ -324,8 +330,8 @@ html{
     border-radius: 0.25rem;
     padding: 0.25rem 0.75rem;
 }
-.blue-button.up{
-    transform: translateY(-3px);
+.button-up:hover{
+    transform: translateY(-5px);
 }
 
 .fade-enter {
@@ -335,3 +341,18 @@ html{
     opacity: 1;
     transition: opacity 200ms;
 }
+
+.filter-item{
+    color: #3f72af;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    padding: 0 10rem 5rem 10rem;
+}
+
+
+
+/* REACT GROUP TRANSITION */

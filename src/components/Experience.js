@@ -35,7 +35,7 @@ function Experience() {
                             <Box flex="1 1 0%">
                               <Text fontSize="xl" fontWeight="500">{v.company}</Text>
                               <Text mb="0.5rem" fontSize="md" fontWeight="400">{v.position}</Text>
-                              <Badge mb="1rem" borderRadius="full" px="0.5rem" py="0.125rem" bg="#3F72AF" color="white">{v.period}</Badge>
+                              <Badge fontWeight="600" mb="1rem" borderRadius="full" px="0.5rem" py="0.125rem" bg="#3F72AF" color="white">{v.period}</Badge>
                             </Box>
                             <Box>
                               <Link target="_blank" href={v.companyUrl}>
