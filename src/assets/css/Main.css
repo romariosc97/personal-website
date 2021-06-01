@@ -55,7 +55,15 @@ html{
     text-decoration: none;
     margin: 0.25rem 1rem;
 }
-.nav-links a:hover {
+.nav-links.light a:hover {
+    /*color: #DBE2EF;*/
+    color: #F9F7F7;
+}
+.nav-links.blue a:hover {
+    /*color: #DBE2EF;*/
+    color: #3f72af;
+}
+.nav-links.dark a:hover {
     /*color: #DBE2EF;*/
     color: #112D4E;
 }
@@ -300,7 +308,7 @@ html{
     color: #F9F7F7;
     background: #4286f4;
     font-weight: 500;
-    transition: 0.4s;
+    transition: all 0.4s ease-in-out;
     border: 3px solid #4286f4;
 }
 .blue-button:hover{
@@ -311,7 +319,7 @@ html{
     color: #4286f4;
     background: transparent;
     font-weight: 500;
-    transition: 0.4s;
+    transition: all 0.4s ease-in-out;
     border: 3px solid #4286f4;
 }
 .blue-button-outline:hover{
@@ -330,7 +338,7 @@ html{
     border-radius: 0.25rem;
     padding: 0.25rem 0.75rem;
 }
-.button-up:hover{
+.button-up:hover, .contact-cards .card:hover{
     transform: translateY(-5px);
 }
 
@@ -353,6 +361,23 @@ html{
     padding: 0 10rem 5rem 10rem;
 }
 
-
-
+.overlay-dark:before{
+    background-color: #010001;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+}
+.contact-cards .card, .contact-cards .card a, .contact-form a.contact-link{
+    transition: all 0.3s ease-in-out;
+}
+.contact-cards .card a, .contact-form a.contact-link{
+    text-decoration: none;
+}
+.contact-cards .card a:hover, .contact-form a.contact-link:hover{
+    color: #3f72af;
+}
 /* REACT GROUP TRANSITION */

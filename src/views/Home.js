@@ -13,13 +13,13 @@ function Home() {
 
     return (
     <div>
-        <Navbar />
-        <Box backgroundColor="#F9F7F7">
+        <Navbar hover="blue" bg="#dbe2ef" color="#112D4E" />
+        <Box backgroundColor="#dbe2ef">
             <Flex px={{base: '1rem', lg: '10rem'}} alignItems="center" justifyContent="space-between" flexDirection="row" color="#112D4E">
                 <Flex flexDirection="column">
-                    <Text pb="0.5rem" fontSize="5xl" className="home-name">Romario Sarmiento</Text>
-                    <Text mt="1.25rem" mb="0.75rem" fontSize="3xl">Web developer</Text>
-                    <Text color="#333" fontSize="md" maxWidth={{base:'400px', lg: '700px'}} textAlign="justify">
+                    <Text w="fit-content" className="text-blue-gradient" fontSize="md">FULL STACK WEB DEVELOPER</Text>
+                    <Text fontWeight="700" pb="1rem" pt="0.5rem" fontSize="6xl">Hello, I'm <Text as="span" display="inline" color="#3f72af" > Romario</Text></Text>
+                    <Text color="#757575" fontSize="lg" maxWidth={{base:'400px', lg: '700px'}} textAlign="justify">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, nisi ad ab, nemo ratione, id soluta aspernatur nulla minus sit magnam. Corporis ipsam eaque reprehenderit quod quisquam.
                     </Text>
                 </Flex>

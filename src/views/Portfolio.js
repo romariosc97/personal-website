@@ -30,7 +30,7 @@ function Portfolio() {
     };
     return (
         <div>
-            <Navbar bg="linear-gradient(to right, rgb(97, 144, 232), rgb(167, 191, 232))" color="#f9f7f7" />
+            <Navbar hover="dark" bg="linear-gradient(to right, rgb(97, 144, 232), rgb(167, 191, 232))" color="#f9f7f7" />
             <Breadcrumb title="Portfolio" bg="linear-gradient(to right, rgb(97, 144, 232), rgb(167, 191, 232))" color="#f9f7f7"/>
             <Box bg="#F9F7F7" py={{base: '1rem', lg: '6rem'}} display="flex" flexDirection="column" alignItems="center" justifyContent="center" color="#112D4E">
                 <Text className="text-blue-gradient" textAlign="center" fontSize="lg" fontWeight="500">All projects</Text>
