@@ -8,6 +8,7 @@ import Home from './views/Home';
 import About from './views/About';
 import Portfolio from './views/Portfolio';
 import Blog from './views/Blog';
+import Article from './views/Article';
 import Contact from './views/Contact';
 import Error404 from './views/Error404';
 import './assets/css/Main.css';
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route exact path="/blog">
           <Blog />
+        </Route>
+        <Route exact path="/blog/:id">
+          <Article />
         </Route>
         <Route exact path="/contact">
           <Contact />

@@ -34,7 +34,7 @@ function Blog() {
                         projects.map((v, k) => {
                             return (
                                 <GridItem key={k}>
-                                    <Box cursor="pointer">
+                                    <Box>
                                         <Box className="overlay-blog">
                                             <Image rounded="lg" height="400px" width="100%" objectFit="cover" src={process.env.PUBLIC_URL + "/blog/" + v.image} alt={v.title}/>
                                             <Box className="text fadeIn-bottom" display="flex" alignItems="center" justifyContent="flex-end" flexDirection="column">
