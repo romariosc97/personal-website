@@ -44,7 +44,7 @@ function ContactForm() {
                                     color="#F9F7F7"
                                     py="1.5rem"
                                     px="2rem"
-                                    rounded="full"
+                                    rounded="xl"
                                     border="3px solid #4286f4"
                                     _hover={{
                                         background: "#F9F7F7",

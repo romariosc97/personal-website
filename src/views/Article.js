@@ -3,6 +3,7 @@ import { Box, Text, Image } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Breadcrumb from "../components/Breadcrumb";
+import CommentForm from "../components/CommentForm";
 import { faClock, faUser, faComment } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -37,13 +38,16 @@ function Error404() {
                     </Box>
                 </Box>
             </Box>
-            <Box py={{base: '1rem', lg: '6rem'}} px={{base: '1rem', lg: '10rem'}}>
+            <Box pt={{base: '1rem', lg: '6rem'}} pb={{base: '1rem', lg: '2.5rem'}} px={{base: '1rem', lg: '10rem'}}>
                 <Text mb="2rem" color="#112D4E" fontSize="md" fontWeight="300">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum. You need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend toitrrepeat predefined chunks.</Text>
                 <Box mb="2rem">
                     <Image w="100%" rounded="lg" src={process.env.PUBLIC_URL + "/blog/content/blog-1.jpg"} objectFit="contain" />
                 </Box>
                 <Text mb="2rem" color="#112D4E" fontSize="md" fontWeight="300">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum. You need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend toitrrepeat predefined chunks.</Text>
                 <Text mb="2rem" color="#112D4E" fontSize="md" fontWeight="300">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum. You need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend toitrrepeat predefined chunks. Necessary, making this the first true generator on the Internet. It re are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injectedeed eedhumour, or randomised words which don't look even slightly believable.</Text>
+            </Box>
+            <Box pb={{base: '1rem', lg: '6rem'}} px={{base: '1rem', lg: '12rem'}}>
+                <CommentForm />
             </Box>
             <Footer />
         </div>
