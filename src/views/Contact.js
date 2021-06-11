@@ -2,7 +2,6 @@ import React, { } from 'react';
 import { Box, Text, Grid, GridItem, Link } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import FloatingToTop from "../components/FloatingToTop";
 import Breadcrumb from "../components/Breadcrumb";
 import ContactForm from "../components/ContactForm";
 import ContactBackground from'../assets/img/breadcrumb/contact.jpg';
@@ -76,7 +75,6 @@ function Contact() {
                 </Grid>
             </Box>
             <ContactForm />
-            <FloatingToTop />
             <Footer />
         </Box>
     )

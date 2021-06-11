@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box } from "@chakra-ui/react";
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,13 +7,34 @@ function FloatingToTop() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     };
+    const [arrowStatus, setArrowStatus] = useState(false);
+    const onScroll = () => {
+        const scrollY = window.scrollY;
+        if(scrollY >= 300){
+            setArrowStatus(true);
+        }else{
+            setArrowStatus(false);
+        }
+    }
+    window.addEventListener('scroll', onScroll);
     useEffect(() => {
-
     }, []);
 
     return (
         <div>
-            <Box className="floating-to-top" cursor="pointer" onClick={top} position="fixed" bottom="2rem" right="2rem" bg="#3F72AF" border="1px solid #3F72AF" py={{base: "0.5rem", lg: "0.85rem"}} px={{base: "0.5rem", lg: "1rem"}} color="#F9F7F7" borderRadius="full">
+            <Box 
+                className={"shadow-lg floating-to-top" + (arrowStatus ? " active" : "")}
+                onClick={top}
+                position="fixed"
+                bottom="2rem"
+                right="2rem"
+                bg="#4286f4"
+                py={{base: "0.5rem", lg: "0.85rem"}}
+                px={{base: "0.5rem", lg: "1rem"}}
+                color="#F9F7F7"
+                borderRadius="xl"
+                cursor="pointer"
+            >
                 <FontAwesomeIcon size="lg" icon={faArrowUp} />
             </Box>
         </div>

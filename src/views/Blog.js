@@ -3,7 +3,6 @@ import { Box, Text, Grid, GridItem, Image } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import FloatingToTop from "../components/FloatingToTop";
 import Breadcrumb from "../components/Breadcrumb";
 
 function Blog() {
@@ -52,7 +51,6 @@ function Blog() {
                     }
                 </Grid>
             </Box>
-            <FloatingToTop />
             <Footer />
         </div>
     )

@@ -45,10 +45,9 @@ function ContactForm() {
                                     py="1.5rem"
                                     px="2rem"
                                     rounded="xl"
-                                    border="3px solid #4286f4"
                                     _hover={{
-                                        background: "#F9F7F7",
-                                        color: "#4286f4",
+                                        background: "#307de4",
+                                        color: "#F9F7F7",
                                     }}
                                 >
                                     SUBMIT NOW

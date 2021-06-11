@@ -3,10 +3,10 @@ import { Box, Text, Flex, Grid, GridItem, Button } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Certifications from "../components/Certifications";
-import FloatingToTop from "../components/FloatingToTop";
 import { faWindowRestore, faFileAlt } from '@fortawesome/free-regular-svg-icons';
 import { faLaptopCode, faDatabase, faEye, faServer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SectionHeader from "../components/SectionHeader";
 function Home() {
     useEffect(() => {
 
@@ -24,6 +24,19 @@ function Home() {
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed"
     };
+    const services = [
+        {title: "Software a la medida", description: "Desarrollo de páginas web y desarrollo de aplicaciones web.", icon: faLaptopCode},
+        {title: "Documentación", description: "Material de consulta para el usuario y/o para el desarrollador.", icon: faFileAlt},
+        {title: "Diseño responsivo", description: "Diseño optimizado para adaptarse a distintos dispositivos.", icon: faWindowRestore},
+        {title: "Posicionamiento", description: "Para que su sitio web sea parte de primeros resultados de los motores de búsqueda.", icon: faEye},
+        {title: "Desarrollo del lado del servidor", description: "Diseño y desarrollo de APIs para recuperar datos de sistemas propios o de sistemas externos.", icon: faDatabase},
+        {title: "Despliegue", description: "Depuración y configuración de su aplicación en un servidor web.", icon: faServer},
+    ];
+    const header = {
+        gradient: "Alcance profesional",
+        title: "SERVICIOS",
+        description: "Cada uno de los servicios brindados se rigen a las buenas prácticas de desarrollo, para garantizar la entrega de un producto de calidad."
+    };
     return (
     <div>
         <Box {...backgroundProps}>
@@ -31,10 +44,10 @@ function Home() {
             <Box>
                 <Flex pt={{base: '1rem', lg: '6rem'}} pb={{base: '1rem', lg: '7.5rem'}} px={{base: '1rem', lg: '10rem'}} alignItems="center" justifyContent="space-between" flexDirection="row" color="#112D4E">
                     <Flex flexDirection="column">
-                        <Text w="fit-content" className="text-blue-gradient" fontSize="lg" fontWeight="400">FULL STACK WEB DEVELOPER</Text>
-                        <Text fontWeight="700" pb="1rem" pt="0.5rem" fontSize="6xl">Hello, I'm <Text as="span" display="inline" color="#3f72af" > Romario</Text></Text>
-                        <Text color="#757575" fontSize="lg" maxWidth={{base:'400px', lg: '700px'}} textAlign="justify">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, nisi ad ab, nemo ratione, id soluta aspernatur nulla minus sit magnam. Corporis ipsam eaque reprehenderit quod quisquam.
+                        <Text w="fit-content" className="text-blue-gradient" fontSize="md" fontWeight="400">DESARROLLADOR WEB FULL STACK</Text>
+                        <Text fontWeight="700" pb="1rem" pt="0.5rem" fontSize="6xl">Hola, soy <Text as="span" display="inline" color="#3f72af" > Romario</Text></Text>
+                        <Text fontSize="lg" maxWidth={{base:'400px', lg: '700px'}} textAlign="justify" fontWeight="300">
+                            Especialista en JavaScript, con capacidad para desarrollar interfaces de usuario con React o Vue.js y la construcción de APIs empleando Node.js para la obtención de datos enviados desde el servidor.
                         </Text>
                         <Button
                             w="200px"
@@ -44,12 +57,11 @@ function Home() {
                             bg="#4286f4"
                             color="#F9F7F7"
                             py="1.5rem"
-                            px="2rem"
+                            px="1.5rem"
                             rounded="xl"
-                            border="3px solid #4286f4"
                             _hover={{
-                                background: "transparent",
-                                color: "#4286f4",
+                                background: "#307de4",
+                                color: "#F9F7F7",
                             }}
                         >
                             DESCARGAR CV
@@ -59,11 +71,7 @@ function Home() {
             </Box>
         </Box>
         <Box bg="#F9F7F7" py={{base: '1rem', lg: '6rem'}} display="flex" flexDirection="column" alignItems="center" justifyContent="center" color="#112D4E">
-            <Text className="text-blue-gradient" textAlign="center" fontSize="lg" fontWeight="500">Services</Text>
-            <Text textAlign="center" fontSize="5xl" fontWeight="600" mb="1rem">Services</Text>
-            <Text maxW={{base: '25rem', lg: '40rem'}} textAlign="center" fontSize="lg" fontWeight="300">
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
-            </Text>
+            <SectionHeader {...header} />
             <Grid
                 alignItems="center"
                 w="100%"
@@ -71,74 +79,25 @@ function Home() {
                 pt={{base: '1rem', lg: '2.5rem'}}
                 templateColumns="repeat(3, 1fr)"
                 rowGap={4}
-                columnGap={8}
+                columnGap={4}
             >
-                <GridItem>
-                    <Box display="flex" alignItems="center" minHeight={{base: "150px", lg: "150px"}} className="card" w="100%" borderRadius="lg">
-                        <Box py="2rem" px="2rem">
-                            <FontAwesomeIcon size="2x" icon={faLaptopCode} />
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="lg" fontWeight="600">Software a la medida</Text>
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="md" fontWeight="400">
-                                Desarrollo de sitios web y de aplicaciones web.
-                            </Text>
-                        </Box>
-                    </Box>
-                </GridItem>
-                <GridItem>
-                    <Box display="flex" alignItems="center" minHeight={{base: "150px", lg: "150px"}} className="card" w="100%" borderRadius="lg">
-                        <Box py="2rem" px="2rem">
-                            <FontAwesomeIcon size="2x" icon={faFileAlt} />
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="lg" fontWeight="600">Documentación</Text>
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="md" fontWeight="400">
-                                Material de consulta para el usuario y/o para el desarrollador.
-                            </Text>
-                        </Box>
-                    </Box>
-                </GridItem>
-                <GridItem>
-                    <Box display="flex" alignItems="center" minHeight={{base: "150px", lg: "150px"}} className="card" w="100%" borderRadius="lg">
-                        <Box py="2rem" px="2rem">
-                            <FontAwesomeIcon size="2x" icon={faWindowRestore} />
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="lg" fontWeight="600">Diseño responsivo</Text>
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="md" fontWeight="400">
-                                Diseño optimizado para adaptarse a distintos dispositivos.
-                            </Text>
-                        </Box>
-                    </Box>
-                </GridItem>
-                <GridItem>
-                    <Box display="flex" alignItems="center" minHeight={{base: "150px", lg: "150px"}} className="card" w="100%" borderRadius="lg">
-                        <Box py="2rem" px="2rem">
-                            <FontAwesomeIcon size="2x" icon={faEye} />
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="lg" fontWeight="600">Posicionamiento</Text>
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="md" fontWeight="400">
-                                SEO para que su sitio web aparezca en los primeros resultados de los motores de búsqueda.
-                            </Text>
-                        </Box>
-                    </Box>
-                </GridItem>
-                <GridItem>
-                    <Box display="flex" alignItems="center" minHeight={{base: "150px", lg: "150px"}} className="card" w="100%" borderRadius="lg">
-                        <Box py="2rem" px="2rem">
-                            <FontAwesomeIcon size="2x" icon={faDatabase} />
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="lg" fontWeight="600">Desarrollo del lado del servidor</Text>
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="md" fontWeight="400">
-                                Diseño y desarrollo de APIs para recuperar datos de sistemas propios o de sistemas externos.
-                            </Text>
-                        </Box>
-                    </Box>
-                </GridItem>
-                <GridItem>
-                    <Box display="flex" alignItems="center" minHeight={{base: "150px", lg: "150px"}} className="card" w="100%" borderRadius="lg">
-                        <Box py="2rem" px="2rem">
-                            <FontAwesomeIcon size="2x" icon={faServer} />
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="lg" fontWeight="600">Despliegue</Text>
-                            <Text mt="0.75rem" mb="0.5rem" fontSize="md" fontWeight="400">
-                                Subida y configuración de su aplicación en un servidor web.
-                            </Text>
-                        </Box>
-                    </Box>
-                </GridItem>
+                {
+                    services.map((v, k) => {
+                        return(
+                            <GridItem key={k}>
+                                <Box display="flex" alignItems="center" minHeight={{base: "150px", lg: "150px"}} className="card" w="100%" borderRadius="lg">
+                                    <Box py="2rem" px="2rem">
+                                        <FontAwesomeIcon size="3x" icon={v.icon} />
+                                        <Text mt="1.25rem" mb="0.75rem" fontSize="xl" fontWeight="600">{v.title}</Text>
+                                        <Text fontSize="md" fontWeight="400">
+                                            {v.description}
+                                        </Text>
+                                    </Box>
+                                </Box>
+                            </GridItem>
+                        )
+                    })
+                }
             </Grid>
         </Box>
         <Box position="relative" className="overlay-dark" w="100%" h="500px" {...parallaxProps}>
@@ -154,13 +113,11 @@ function Home() {
                     bg="#4286f4"
                     color="#FFF"
                     py="1.5rem"
-                    px="2rem"
+                    px="1.5rem"
                     rounded="xl"
-                    border="3px solid #4286f4"
                     _hover={{
-                        border: "3px solid #FFF",
-                        background: "transparent",
-                        color: "#FFF",
+                        background: "#307de4",
+                        color: "#F9F7F7",
                     }}
                 >
                     SALUDAR
@@ -168,7 +125,6 @@ function Home() {
             </Flex>
         </Box>
         <Certifications />
-        <FloatingToTop />
         <Footer />
     </div>
     )

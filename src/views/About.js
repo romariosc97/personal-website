@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import Certifications from "../components/Certifications";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
-import FloatingToTop from "../components/FloatingToTop";
 import AboutJpg from'../assets/img/about.jpg';
 import { faLinkedin, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -33,14 +32,14 @@ function About() {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elnecess itatibus aperiam voluptas rem nam, dolorem dolores reiciend obcaecati quas iusto beatae ab asperiores explicabo laudan illum, volupt atem corrupti blanditiis fugit enim. Necess itatibu aperiam voluptas rem nam Lorem ipsum dolor sit amet, con sectetur adipisicing elit. Suscipit ullam ea assumenda facilis quo omnis fugit ipsum molest iae volupt atem et.
                     </Text>
                     <Text fontSize="lg" fontWeight="600" mb="0.5rem">Follow me</Text>
-                    <Box display="flex" flexDirection="row" className="about-social-media">
-                        <Link mr="1rem" mt="0.5rem" href="https://www.linkedin.com/in/romariosarmiento/" target="_blank" rel="noopener noreferrer">
+                    <Box display="flex" flexDirection="row" className="about-social-media" mt="1rem">
+                        <Link mr="1rem" href="https://www.linkedin.com/in/romariosarmiento/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon size="lg" icon={faLinkedin} color="#0a66c2"/>
                         </Link>
-                        <Link mr="1rem" mt="0.5rem" href="https://github.com/romariosc97" target="_blank" rel="noopener noreferrer">
+                        <Link mr="1rem" href="https://github.com/romariosc97" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon size="lg" icon={faGithub} color="#333"/>
                         </Link>
-                        <Link mr="1rem" mt="0.5rem" href="https://www.youtube.com/channel/UCaoHn3uiNZuf574nSOHW4Cw" target="_blank" rel="noopener noreferrer">
+                        <Link mr="1rem" href="https://www.youtube.com/channel/UCaoHn3uiNZuf574nSOHW4Cw" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon size="lg" icon={faYoutube} color="#ff0000" />
                         </Link>
                     </Box>
@@ -50,7 +49,6 @@ function About() {
         <Experience />
         <Education />
         <Certifications />
-        <FloatingToTop />
         <Footer />
     </div>
   )

@@ -12,11 +12,9 @@ import Article from './views/Article';
 import Contact from './views/Contact';
 import Error404 from './views/Error404';
 import './assets/css/Main.css';
-
 function App() {
   return (
     <Router>
-      
       <Switch>
         <Route exact path="/">
           <Home />
@@ -40,7 +38,6 @@ function App() {
           <Error404 />
         </Route>
       </Switch>
-        
     </Router>
   );
 }
