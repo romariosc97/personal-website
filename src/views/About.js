@@ -19,7 +19,7 @@ function About() {
   return (
     <div>
         <Navbar bg="linear-gradient(to right, rgb(97, 144, 232), rgb(167, 191, 232))" color="#f9f7f7" />
-        <Breadcrumb title="About" bg="linear-gradient(to right, rgb(97, 144, 232), rgb(167, 191, 232))" color="#f9f7f7"/>
+        <Breadcrumb title="Sobre mí" bg="linear-gradient(to right, rgb(97, 144, 232), rgb(167, 191, 232))" color="#f9f7f7"/>
         <Box backgroundColor="#F9F7F7">
             <Grid py="5rem" px={{base: '1rem', lg: '10rem'}} templateColumns="repeat(4, 1fr)" gap={10}>
                 <GridItem>
@@ -27,11 +27,11 @@ function About() {
                 </GridItem>
                 <GridItem colSpan="3" color="#112D4E">
                     <Text textTransform="uppercase" display="inline-block" fontSize="lg" fontWeight="500" className="text-multicolor-gradient">Full stack web developer</Text>
-                    <Text fontSize="5xl" fontWeight="600">ABOUT ME</Text>
+                    <Text fontSize="5xl" fontWeight="600">SOBRE MÍ</Text>
                     <Text color="#757575" fontSize="lg" fontWeight="300" my="1rem" textAlign="justify">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elnecess itatibus aperiam voluptas rem nam, dolorem dolores reiciend obcaecati quas iusto beatae ab asperiores explicabo laudan illum, volupt atem corrupti blanditiis fugit enim. Necess itatibu aperiam voluptas rem nam Lorem ipsum dolor sit amet, con sectetur adipisicing elit. Suscipit ullam ea assumenda facilis quo omnis fugit ipsum molest iae volupt atem et.
                     </Text>
-                    <Text fontSize="lg" fontWeight="600" mb="0.5rem">Follow me</Text>
+                    <Text fontSize="lg" fontWeight="600" mb="0.5rem">Sígueme</Text>
                     <Box display="flex" flexDirection="row" className="about-social-media" mt="1rem">
                         <Link mr="1rem" href="https://www.linkedin.com/in/romariosarmiento/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon size="lg" icon={faLinkedin} color="#0a66c2"/>

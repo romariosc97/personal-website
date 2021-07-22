@@ -16,8 +16,11 @@ function FloatingToTop() {
             setArrowStatus(false);
         }
     }
-    window.addEventListener('scroll', onScroll);
     useEffect(() => {
+        window.addEventListener('scroll', onScroll);
+        return () => {
+            window.removeEventListener("scroll", onScroll)
+        }
     }, []);
 
     return (

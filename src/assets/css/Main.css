@@ -400,4 +400,8 @@ html{
 .contact-cards .card a:hover, .contact-form a.contact-link:hover{
     color: #3f72af;
 }
+.button-router{
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+}
 /* REACT GROUP TRANSITION */

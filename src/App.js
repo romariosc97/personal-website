@@ -7,6 +7,7 @@ import {
 import Home from './views/Home';
 import About from './views/About';
 import Portfolio from './views/Portfolio';
+import PortfolioDetail from './views/PortfolioDetail';
 import Blog from './views/Blog';
 import Article from './views/Article';
 import Contact from './views/Contact';
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route exact path="/portfolio">
           <Portfolio />
+        </Route>
+        <Route exact path="/portfolio/:id">
+          <PortfolioDetail />
         </Route>
         <Route exact path="/blog">
           <Blog />

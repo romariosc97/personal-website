@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { } from 'react';
 import { Box, Text } from "@chakra-ui/react";
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,10 +6,6 @@ import { Link } from 'react-router-dom';
 import FloatingToTop from "../components/FloatingToTop";
 
 function Footer() {
-
-    useEffect(() => {
-
-    }, []);
     return (
         <div>
             <Box className="shadow" bg="#112D4E" w="100%" px={{base: '1rem', sm: '2rem', lg:'10rem'}} py={{base: '1rem', sm: '2rem', lg: '3rem'}} color="#DBE2EF" display="flex" flexDirection="row" justifyContent="space-between">

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box, Text, Flex, Grid, GridItem, Button } from "@chakra-ui/react";
+import { Box, Text, Flex, Grid, GridItem } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Certifications from "../components/Certifications";
@@ -7,6 +7,7 @@ import { faWindowRestore, faFileAlt } from '@fortawesome/free-regular-svg-icons'
 import { faLaptopCode, faDatabase, faEye, faServer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SectionHeader from "../components/SectionHeader";
+import ButtonRouter  from "../components/navigation/ButtonRouter";
 function Home() {
     useEffect(() => {
 
@@ -49,23 +50,7 @@ function Home() {
                         <Text fontSize="lg" maxWidth={{base:'400px', lg: '700px'}} textAlign="justify" fontWeight="300">
                             Especialista en JavaScript, con capacidad para desarrollar interfaces de usuario con React o Vue.js y la construcción de APIs empleando Node.js para la obtención de datos enviados desde el servidor.
                         </Text>
-                        <Button
-                            w="200px"
-                            mt="2rem"
-                            fontWeight="400"
-                            fontSize="lg"
-                            bg="#4286f4"
-                            color="#F9F7F7"
-                            py="1.5rem"
-                            px="1.5rem"
-                            rounded="xl"
-                            _hover={{
-                                background: "#307de4",
-                                color: "#F9F7F7",
-                            }}
-                        >
-                            DESCARGAR CV
-                        </Button>
+                        <ButtonRouter external pathname="https://drive.google.com/file/d/1isW7A5X46ylhu0fbpORkN59veZ9PVNzi/view?usp=sharing">DESCARGAR CV</ButtonRouter>
                     </Flex>
                 </Flex>
             </Box>
@@ -106,22 +91,7 @@ function Home() {
                 <Text zIndex="1" fontSize="xl">
                     Contáctame ahora mismo.
                 </Text>
-                <Button
-                    mt="2rem"
-                    fontWeight="400"
-                    fontSize="lg"
-                    bg="#4286f4"
-                    color="#FFF"
-                    py="1.5rem"
-                    px="1.5rem"
-                    rounded="xl"
-                    _hover={{
-                        background: "#307de4",
-                        color: "#F9F7F7",
-                    }}
-                >
-                    SALUDAR
-                </Button>
+                <ButtonRouter pathname="/contact" hash="#contactForm">SALUDAR</ButtonRouter>
             </Flex>
         </Box>
         <Certifications />

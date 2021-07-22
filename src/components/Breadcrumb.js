@@ -20,7 +20,7 @@ function Breadcrumb(props) {
                         :
                             (
                             <Fragment>
-                                <Link to="/"><Text textAlign="center">Home</Text></Link>
+                                <Link to="/"><Text textAlign="center">Inicio</Text></Link>
                                 <Box opacity="0.5" mx="0.5rem" my="auto" w="4.8px" h="5px" borderRadius="full" bg="#112D4E"/>
                                 <Text textAlign="center">{props.title}</Text>
                             </Fragment>
