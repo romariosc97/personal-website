@@ -6,29 +6,40 @@ import Footer from "../components/Footer";
 import Breadcrumb from "../components/Breadcrumb";
 import FlipMove from 'react-flip-move';
 import SectionHeader from "../components/SectionHeader";
-function Portfolio() {
-    const projects = [
-        {id: 1, title: "Lowtide", type: "Salesforce", description: "Aplicación para la subida de conjuntos de datos a tu org de salesforce.", image: "lowtide-2.PNG"},
-        {id: 2, title: "Elipse", type: "Aplicacion", description: "Integración del frontend y el backend para una academia.", image: "elipse-1.PNG"},
-        {id: 3, title: "COMPAra", type: "Tienda", description: "Aplicación para la consulta de precios de productos en múltiples páginas.", image: "project-3-1.jpg"},
-    ];
-    const types = ["Salesforce", "CMS"];
-    const [filtered, setFiltered] = useState(projects);
-    useEffect(() => {
 
-    }, []);
-    const filterData = (type) => {
-        if(type==='All'){
-            setFiltered(projects);
-        }else{
-            setFiltered(projects.filter((v) => v.type===type));
-        }
-    };
+import PortfolioService from "../services/PortfolioService";
+import TypeService from "../services/TypeService";
+
+function Portfolio() {
     const header = {
         gradient: "Proyectos",
         title: "Trabajo",
         description: "Mostraré algunos proyectos que he desarrollado a lo largo de mi trayectoria profesional."
     };
+
+    const [types, setTypes] = useState([]);
+    const [projects, setProjects] = useState([]);
+    const [filtered, setFiltered] = useState([]);
+    const getPortfolio = async () => {
+        const response = await PortfolioService.getPortfolio();
+        setProjects(response.data.data);
+        setFiltered(response.data.data);
+    }
+    const getTypes = async () => {
+        const responseType = await TypeService.getTypes();
+        setTypes(responseType.data.data);
+    }
+    const filterData = (typeId) => {
+        if(typeId===0){
+            setFiltered(projects);
+        }else{
+            setFiltered(projects.filter((v) => v.project_type_id===typeId));
+        }
+    };
+    useEffect(() => {
+        getPortfolio();
+        getTypes();
+    }, []);
     return (
         <div>
             <Navbar hover="dark" bg="linear-gradient(to right, rgb(97, 144, 232), rgb(167, 191, 232))" color="#f9f7f7" />
@@ -40,15 +51,15 @@ function Portfolio() {
                         types.map((v, k) => {
                             return (
                                 <GridItem key={k}>
-                                    <Box onClick={() => {filterData(v)}} className="filter-item" cursor="pointer" fontWeight="700">
-                                        {v}
+                                    <Box onClick={() => {filterData(v.id)}} className="filter-item" cursor="pointer" fontWeight="700">
+                                        {v.name}
                                     </Box>
                                 </GridItem>
                             )
                         })
                     }
                     <GridItem>
-                        <Box onClick={() => {filterData('All')}} className="filter-item" cursor="pointer" fontWeight="700">
+                        <Box onClick={() => {filterData(0)}} className="filter-item" cursor="pointer" fontWeight="700">
                             Todo
                         </Box>
                     </GridItem>

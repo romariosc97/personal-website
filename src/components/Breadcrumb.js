@@ -9,7 +9,7 @@ function Breadcrumb(props) {
         <div>
             <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" px={{base: '1rem', sm: '2rem', lg:'10rem'}} pt={{base: '1rem', sm: '2rem', lg: (props.description ? '10rem' : '8rem')}} pb={{base: '1rem', sm: '2rem', lg: (props.description ? (props.description===" " ? '6rem' : '10rem') : '8rem')}} bg={props.bg} color={props.color}>
                 <Text maxW={{base: '25rem', lg: '60rem'}} zIndex="1" textAlign="center" fontSize="5xl" fontWeight="700">{props.title}</Text>
-                <Box maxW={{base: '25rem', lg: '40rem'}} display="flex" flexDirection="row" fontSize="md" fontWeight="400">
+                <Box maxW={{base: '25rem', lg: '45rem'}} display="flex" flexDirection="row" fontSize="md" fontWeight="400">
                     {
                         props.description ?
                             (

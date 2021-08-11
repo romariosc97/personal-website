@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Box, Grid, GridItem, Text, Link, Input, Textarea, Button, Image } from "@chakra-ui/react";
-import ContactFormImg from'../assets/img/contact-form.jpg';
 function ContactForm() {
     useEffect(() => {
 
@@ -55,7 +54,7 @@ function ContactForm() {
                             </Box>
                         </GridItem>
                         <GridItem>
-                            <Image rounded="lg" src={ContactFormImg} objectFit="contain" />
+                            <Image rounded="lg" src={process.env.PUBLIC_URL + "/contact-form.jpg"} objectFit="contain" />
                         </GridItem>
                     </Grid>
                 </Box>

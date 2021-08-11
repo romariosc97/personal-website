@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import { Box, Grid, GridItem } from "@chakra-ui/react";
-import Tecsup from'../assets/img/education/tecsup.png';
-import Unam from'../assets/img/education/unam.png';
 import CardPeriod from "../components/CardPeriod";
 import SectionHeader from "../components/SectionHeader";
 
 function Education() {
     const education = [
-        {title: "Universidad Nacional de Moquegua", subtitle: "Ingeniería de Sistemas e Informática", period: "Apr. 2015 - Dec. 2019", description: "Collaborate with creative and development teams on the execution of ideas.", logo: Unam, url: "https://unam.edu.pe/"},
-        {title: "TECSUP", subtitle: "Desarrollo web fullstack", period: "Jul. 2020 - Jan. 2021", description: "Collaborate with creative and development teams on the execution of ideas.", logo: Tecsup, url: "https://www.tecsup.edu.pe/"}
+        {title: "Universidad Nacional de Moquegua", subtitle: "Ingeniería de Sistemas e Informática", period: "Apr. 2015 - Dec. 2019", description: "Collaborate with creative and development teams on the execution of ideas.", logo: process.env.PUBLIC_URL + "/education/unam.png", url: "https://unam.edu.pe/"},
+        {title: "TECSUP", subtitle: "Desarrollo web fullstack", period: "Jul. 2020 - Jan. 2021", description: "Collaborate with creative and development teams on the execution of ideas.", logo: process.env.PUBLIC_URL + "/education/tecsup.png", url: "https://www.tecsup.edu.pe/"}
     ];
     useEffect(() => {
 

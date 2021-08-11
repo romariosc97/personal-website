@@ -12,13 +12,14 @@ function Certifications() {
     }, []);
     const header = {
         gradient: "Especializaciones",
-        title: "CERTIFICACIONES"
+        title: "CERTIFICACIONES",
+        description: "Obtenidas después de estudiar y aprobar los exámenes requeridos"
     };
     return (
         <div>
             <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" px={{base: '1rem', sm: '2rem', lg:'10rem'}} py={{base: '1rem', sm: '2rem', lg: '5rem'}} color="#112D4E">
                 <SectionHeader {...header} />
-                <Box className="certifications" w="100%" display="flex" flexDirection="row" justifyContent="space-evenly" alignItems="center" mb="0.5rem" mt="3rem">
+                <Box className="certifications" w="100%" display="flex" flexDirection="row" justifyContent="space-evenly" alignItems="center" mb="0.5rem" mt="4rem">
                     {
                         certifications.map((v, k) => {
                             return(

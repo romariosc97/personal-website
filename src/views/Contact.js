@@ -4,14 +4,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Breadcrumb from "../components/Breadcrumb";
 import ContactForm from "../components/ContactForm";
-import ContactBackground from'../assets/img/breadcrumb/contact.jpg';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SectionHeader from "../components/SectionHeader";
 function Contact() {
     const backgroundProps = {
-        style: {backgroundImage: `url('${ContactBackground}')`},
+        style: {backgroundImage: `url('${process.env.PUBLIC_URL + "/breadcrumb/contact-2.jpg"}')`},
         backgroundSize: "cover",
         backgroundPosition: "top",
         backgroundRepeat: "no-repeat"
@@ -21,7 +20,7 @@ function Contact() {
         title: "CONTACTO",
         description: "Puedes contactarme por los siguiente medios"
     };
-    const description = "Tu solución está a un mensaje de ti.";
+    const description = "Tu solución está a un mensaje de ti";
     return (
         <Box>
             <Box position="relative" className="overlay-dark" {...backgroundProps}>

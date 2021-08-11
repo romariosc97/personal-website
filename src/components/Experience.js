@@ -1,22 +1,20 @@
 import React, { useEffect } from 'react';
 import { Box, Grid, GridItem } from "@chakra-ui/react";
-import Oktana from'../assets/img/experience/oktana.png';
-import Innovahora from'../assets/img/experience/innovahora.png';
 import SectionHeader from "../components/SectionHeader";
 import CardPeriod from "../components/CardPeriod";
 
 function Experience() {
   const experience = [
-    {title: "Innovahora S.A.C.", subtitle: "Full stack web developer", period: "Sep. 2019 - Aug. 2020", description: "Collaborate with creative and development teams on the execution of ideas.", logo: Innovahora, url: "https://innovahora.com/ima/"},
-    {title: "Oktana Corporation", subtitle: "Salesforce developer", period: "Sep. 2020 - Act.", description: "Collaborate with creative and development teams on the execution of ideas.", logo: Oktana, url: "https://www.oktana.com/"}
+    {title: "Innovahora S.A.C.", subtitle: "Full stack web developer", period: "Sep. 2019 - Aug. 2020", description: "Collaborate with creative and development teams on the execution of ideas.", logo: process.env.PUBLIC_URL + "/experience/innovahora.png", url: "https://innovahora.com/ima/"},
+    {title: "Oktana Corporation", subtitle: "Salesforce developer", period: "Sep. 2020 - Act.", description: "Collaborate with creative and development teams on the execution of ideas.", logo: process.env.PUBLIC_URL + "/experience/oktana.png", url: "https://www.oktana.com/"}
   ];
   useEffect(() => {
 
   }, []);
   const header = {
-    gradient: "Trabajos",
+    gradient: "Camino profesional",
     title: "EXPERIENCIA",
-    description: "Camino profesional"
+    description: "Compañías en las que he trabajado"
   };
   return (
     <div>

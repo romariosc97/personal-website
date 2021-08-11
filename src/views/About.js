@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import Certifications from "../components/Certifications";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
-import AboutJpg from'../assets/img/about.jpg';
 import { faLinkedin, faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -23,7 +22,7 @@ function About() {
         <Box backgroundColor="#F9F7F7">
             <Grid py="5rem" px={{base: '1rem', lg: '10rem'}} templateColumns="repeat(4, 1fr)" gap={10}>
                 <GridItem>
-                    <Image borderRadius="lg" src={AboutJpg} alt="Romario Sarmiento" />
+                    <Image borderRadius="lg" src={process.env.PUBLIC_URL + "/about.jpg"} alt="Romario Sarmiento" />
                 </GridItem>
                 <GridItem colSpan="3" color="#112D4E">
                     <Text textTransform="uppercase" display="inline-block" fontSize="lg" fontWeight="500" className="text-multicolor-gradient">Full stack web developer</Text>
