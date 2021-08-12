@@ -51,7 +51,6 @@ function PortfolioDetail() {
         const getImages = async () => {
             const response = await PortfolioService.getPortfolioByIdImages(id);
             setImages(response.data.data);
-            console.log(response.data.data);
         };
         getDetail();
         getImages();
@@ -112,13 +111,18 @@ function PortfolioDetail() {
                         </List>
                     </GridItem>
                 </Grid>
-                <Box pt={{base:'1rem', lg: '4rem'}}>
-                    {
-                        images.map((v, k) => {
-                            <Image key={k} rounded="lg" my="2rem" src={process.env.PUBLIC_URL + "/projects/content/"+ v.image} alt={v.name} />
-                        })
-                    }
-                </Box>
+                {
+                    images.length > 0 ?
+                    <Box pt={{base:'1rem', lg: '4rem'}}>
+                        {
+                            images.map((v, k) => {
+                                return (
+                                    <Image key={k} rounded="lg" my="2rem" src={process.env.PUBLIC_URL + "/projects/content/"+ v.image} alt={v.name} />
+                                )
+                            })
+                        }
+                    </Box> : ''
+                }
             </Box>
             <Footer />
         </div>

@@ -45,12 +45,12 @@ function Home() {
             <Box>
                 <Flex pt={{base: '1rem', lg: '6rem'}} pb={{base: '1rem', lg: '7.5rem'}} px={{base: '1rem', lg: '10rem'}} alignItems="center" justifyContent="space-between" flexDirection="row" color="#112D4E">
                     <Flex flexDirection="column">
-                        <Text w="fit-content" className="text-blue-gradient" fontSize="md" fontWeight="400">DESARROLLADOR WEB FULL STACK</Text>
-                        <Text fontWeight="700" pb="1rem" pt="0.5rem" fontSize="6xl">Hola, soy <Text as="span" display="inline" color="#3f72af" > Romario</Text></Text>
+                        <Text w="fit-content" className="text-blue-gradient" fontSize="lg" fontWeight="500">DESARROLLADOR WEB FULL STACK</Text>
+                        <Text fontWeight="700" pb="1rem" fontSize="6xl">Hola, soy <Text as="span" display="inline" color="#3f72af" > Romario</Text></Text>
                         <Text fontSize="lg" maxWidth={{base:'400px', lg: '700px'}} textAlign="justify" fontWeight="300">
                             Especialista en JavaScript, con capacidad para desarrollar interfaces de usuario con React o Vue.js y la construcción de APIs empleando Node.js para la obtención de datos enviados desde el servidor.
                         </Text>
-                        <ButtonRouter external pathname="https://drive.google.com/file/d/1isW7A5X46ylhu0fbpORkN59veZ9PVNzi/view?usp=sharing">DESCARGAR CV</ButtonRouter>
+                        <ButtonRouter external pathname="https://drive.google.com/file/d/1hn6TAtguTXwMX5TyajcyiSIN6yOjGnlF/view?usp=sharing">DESCARGAR CV</ButtonRouter>
                     </Flex>
                 </Flex>
             </Box>
