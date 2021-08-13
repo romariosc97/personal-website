@@ -1,9 +1,8 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Box, Text, Badge, Image, Link, List, ListItem } from "@chakra-ui/react";
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function CardPeriod(props) {
-    const [list, setList] = useState('');
     const normalizeText = (text) => {
         let tmp = [];
         const descriptionArray = text.split('<br/>');

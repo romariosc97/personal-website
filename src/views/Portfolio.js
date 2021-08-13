@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Text, Grid, GridItem, Image } from "@chakra-ui/react";
+import React, { useState, useEffect, Fragment } from 'react';
+import { Box, Text, Grid, GridItem, Image, Skeleton } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -48,6 +48,7 @@ function Portfolio() {
                 <SectionHeader {...header} />
                 <Grid textAlign="center" pt={{base:"2rem", lg:"5rem"}} pb={{base:"1rem", lg:"3rem"}} px={{base: '1rem', lg: '10rem'}} templateColumns="repeat(3, 1fr)" gap={8}>
                     {
+                        types.length > 0 ?
                         types.map((v, k) => {
                             return (
                                 <GridItem key={k}>
@@ -56,30 +57,44 @@ function Portfolio() {
                                     </Box>
                                 </GridItem>
                             )
-                        })
+                        }) :
+                        <Fragment>
+                            <Skeleton w="75px" height="1rem" />
+                            <Skeleton w="75px" height="1rem" />
+                            <Skeleton w="75px" height="1rem" />
+                        </Fragment>
                     }
-                    <GridItem>
-                        <Box onClick={() => {filterData(0)}} className="filter-item" cursor="pointer" fontWeight="700">
-                            Todo
-                        </Box>
-                    </GridItem>
+                    {
+                        types.length > 0 ?
+                        <GridItem>
+                            <Box onClick={() => {filterData(0)}} className="filter-item" cursor="pointer" fontWeight="700">
+                                Todo
+                            </Box>
+                        </GridItem> : ''
+                    }
                 </Grid>
                     <FlipMove className="project-container">
                     {
+                        filtered.length > 0 ?
                         filtered.map((v, k) => {
                             return (
                                 <Link to={"/portfolio/" + v.id} key={k}>
                                     <Box className="overlay-portfolio">
-                                        <Image rounded="lg" height="250px" width="100%" objectFit="cover" src={process.env.PUBLIC_URL + "/projects/" + v.image} alt={v.title} />
+                                        <Image rounded="lg" height="250px" width="100%" objectFit="cover" src={process.env.PUBLIC_URL + "/projects/" + v.image} alt={v.name} />
                                         <Box className="text fadeIn-bottom" display="flex" alignItems="center" justifyContent="center" flexDirection="column" textAlign="justify">
-                                            <Text px="1.5rem" fontSize="2xl" fontWeight="700" textTransform="uppercase">{v.title}</Text>
-                                            <Text px="1.5rem" fontSize="lg" fontWeight="300">{v.description}</Text>
+                                            <Text px="1.5rem" fontSize="2xl" fontWeight="700" textTransform="uppercase">{v.name}</Text>
+                                            <Text px="1.5rem" fontSize="lg" fontWeight="300">{v.short_description}</Text>
                                         </Box>
                                     </Box>
                                 </Link>
                                     
                             )
-                        })
+                        }) : 
+                        <Fragment>
+                            <Skeleton w="100%" height="250px" />
+                            <Skeleton w="100%" height="250px" />
+                            <Skeleton w="100%" height="250px" />
+                        </Fragment>
                     }
                     </FlipMove>
             </Box>

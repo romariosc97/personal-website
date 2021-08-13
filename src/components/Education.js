@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Box, Grid, GridItem } from "@chakra-ui/react";
+import React, { Fragment, useEffect } from 'react';
+import { Box, Grid, GridItem, Skeleton } from "@chakra-ui/react";
 import CardPeriod from "../components/CardPeriod";
 import SectionHeader from "../components/SectionHeader";
 
@@ -26,13 +26,48 @@ function Education() {
                         gap={8}
                     >
                         {
+                            education.length > 0 ?
                             education.map((v, k) => {
                                 return(
                                     <GridItem key={k}>
                                         <CardPeriod data={v} />
                                     </GridItem>
                                 )
-                            })
+                            }) :
+                            <Fragment>
+                                <Box w="100%" borderWidth="1px" borderRadius="lg" bg="white">
+                                    <Box py="1.5rem" px="2rem">
+                                        <Box display="flex">
+                                            <Box display="flex" flexDir="column">
+                                                <Skeleton mr="1rem" mb="auto" w="300px" height="1.25rem" />
+                                                <Skeleton mr="1rem" w="250px" height="1rem" />
+                                            </Box>
+                                            <Skeleton marginLeft="auto" w="50px" height="50px" />
+                                        </Box>
+                                        <Box mt="1rem">
+                                            <Skeleton rounded="lg" mr="1rem" w="100px" height="1rem" />
+                                            <Skeleton mt="1rem" w="90%" height="1rem" />
+                                            <Skeleton mt="1rem" w="80%" height="1rem" />
+                                        </Box>
+                                    </Box>
+                                </Box>
+                                <Box w="100%" borderWidth="1px" borderRadius="lg" bg="white">
+                                    <Box py="1.5rem" px="2rem">
+                                        <Box display="flex">
+                                            <Box display="flex" flexDir="column">
+                                                <Skeleton mr="1rem" mb="auto" w="300px" height="1.25rem" />
+                                                <Skeleton mr="1rem" w="250px" height="1rem" />
+                                            </Box>
+                                            <Skeleton marginLeft="auto" w="50px" height="50px" />
+                                        </Box>
+                                        <Box mt="1rem">
+                                            <Skeleton rounded="lg" mr="1rem" w="100px" height="1rem" />
+                                            <Skeleton mt="1rem" w="90%" height="1rem" />
+                                            <Skeleton mt="1rem" w="80%" height="1rem" />
+                                        </Box>
+                                    </Box>
+                                </Box>
+                            </Fragment>
                         }
                     </Grid>
                 </Box>

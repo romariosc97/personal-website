@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Image, Link } from "@chakra-ui/react";
+import React, { useState, useEffect, Fragment } from 'react';
+import { Box, Image, Link, Skeleton } from "@chakra-ui/react";
 import SectionHeader from "../components/SectionHeader";
 
 import CertificationService from "../services/CertificationService";
@@ -24,6 +24,7 @@ function Certifications() {
                 <SectionHeader {...header} />
                 <Box className="certifications" w="100%" display="flex" flexDirection="row" justifyContent="space-evenly" alignItems="center" mb="0.5rem" mt="4rem">
                     {
+                        certifications.length > 0 ?
                         certifications.map((v, k) => {
                             return(
                                 <Box key={k} w={'8rem'}>
@@ -32,7 +33,14 @@ function Certifications() {
                                     </Link>
                                 </Box>
                             )
-                        })
+                        }) : 
+                        <Fragment>
+                            <Skeleton w={'8rem'} height="8rem" />
+                            <Skeleton rounded="full" w={'8rem'} height="8rem" />
+                            <Skeleton w={'16rem'} height="4rem" />
+                            <Skeleton w={'8rem'} height="8rem" />
+                            <Skeleton rounded="full" w={'8rem'} height="8rem" />
+                        </Fragment>
                     }
                 </Box>
             </Box>
