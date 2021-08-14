@@ -3,6 +3,7 @@ import { Box, Text, Badge, Image, Link, List, ListItem } from "@chakra-ui/react"
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function CardPeriod(props) {
+    
     const normalizeText = (text) => {
         let tmp = [];
         const descriptionArray = text.split('<br/>');
@@ -24,13 +25,13 @@ function CardPeriod(props) {
                 <Box py="1.5rem" px="2rem">
                     <Box display="flex" >
                         <Box flex="1 1 0%">
-                            <Text fontSize="xl" fontWeight="500">{props.data.title}</Text>
-                            <Text mb="0.5rem" fontSize="md" fontWeight="400">{props.data.subtitle}</Text>
-                            <Badge fontWeight="600" mb="1rem" borderRadius="full" px="0.5rem" py="0.125rem" bg="#3F72AF" color="white">{props.data.period}</Badge>
+                            <Text fontSize="xl" fontWeight="500">{props.data.institution_name}</Text>
+                            <Text mb="0.5rem" fontSize="md" fontWeight="400">{props.data.title}</Text>
+                            <Badge fontWeight="600" mb="1rem" borderRadius="full" px="0.5rem" py="0.125rem" bg="#3F72AF" color="white">{`${props.data.period_start} - ${props.data.period_end}`}</Badge>
                         </Box>
                         <Box>
-                            <Link target="_blank" href={props.data.url}>
-                                <Image className="img-grow" src={props.data.logo} w="2.5rem" h="2.5rem" objectFit="contain" />
+                            <Link target="_blank" href={props.data.institution_url}>
+                                <Image className="img-grow" src={process.env.PUBLIC_URL + "/education/" + props.data.institution_image} w="2.5rem" h="2.5rem" objectFit="contain" />
                             </Link>
                         </Box>
                     </Box>

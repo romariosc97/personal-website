@@ -1,15 +1,38 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Box, Grid, GridItem, Skeleton } from "@chakra-ui/react";
 import CardPeriod from "../components/CardPeriod";
 import SectionHeader from "../components/SectionHeader";
 
+import EducationService from "../services/EducationService";
+    
 function Education() {
+    /*
     const education = [
         {title: "Universidad Nacional de Moquegua", subtitle: "Ingeniería de Sistemas e Informática", period: "Apr. 2015 - Dec. 2019", description: "Bachiller en Ingeniería de Sistemas e Informática", logo: process.env.PUBLIC_URL + "/education/unam.png", url: "https://unam.edu.pe/"},
         {title: "TECSUP", subtitle: "Desarrollo web fullstack", period: "Jul. 2020 - Jan. 2021", description: "Certificado de estudio", logo: process.env.PUBLIC_URL + "/education/tecsup.png", url: "https://www.tecsup.edu.pe/"}
     ];
+    */
+    const [education, setEducation] = useState([]);
     useEffect(() => {
-
+        const getDate = (date) => {
+            let arrayTmp, dateTmp, dayTmp, monthTmp, yearTmp;
+            arrayTmp = date.split('T');
+            dateTmp = arrayTmp[0].split('-')
+            yearTmp = dateTmp[0];
+            monthTmp = dateTmp[1];
+            //dayTmp = dateTmp[2];
+            return `${monthTmp}/${yearTmp}`
+        };
+        const getEducation = async () => {
+            const response = await EducationService.getEducation();
+            let tmp = response.data.data;
+            tmp.forEach(v => {
+                v.period_start = getDate(v.period_start);
+                v.period_end = getDate(v.period_end);
+            });
+            setEducation(tmp);
+        };
+        getEducation();
     }, []);
     const header = {
         gradient: "Formación académica",
