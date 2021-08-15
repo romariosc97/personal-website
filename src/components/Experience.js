@@ -1,15 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import { Box, Grid, GridItem } from "@chakra-ui/react";
 import SectionHeader from "../components/SectionHeader";
 import CardPeriod from "../components/CardPeriod";
+import Dates from "../utilities/Dates";
+
+import ExperienceService from "../services/ExperienceService";
+import CardPeriodLoading from "./CardPeriodLoading";
 
 function Experience() {
-  const experience = [
-    {title: "Oktana Corporation", subtitle: "Salesforce developer", period: "Sep. 2020 - Act.", description: "Fundamentos de APEX y Lightning Web Components (LWC)<br/>Desarrollo de interfaces de usuario en React o en Vue.js, apoyados por Chakra UI o Tailwind CSS<br/>Construcción de API REST en Node.js que recupera datos de Salesforce gracias a JSForce<br/>Comunicación con personas de diversas partes del mundo a través del inglés", logo: process.env.PUBLIC_URL + "/experience/oktana.png", url: "https://www.oktana.com/"},
-    {title: "Innovahora S.A.C.", subtitle: "Full stack web developer", period: "Sep. 2019 - Aug. 2020", description: "Desarrollo de sitios web y tiendas virtuales, utilizando JQuery y Bootstrap<br/>Desarrollo de API REST en CodeIgniter o Django para la obtención de datos alojados en bases de datos de MySQL o de SQL Server<br/>Integración con Mercado Libre, Mercado Pago y autenticación en Google y Facebook", logo: process.env.PUBLIC_URL + "/experience/innovahora.png", url: "https://innovahora.com/ima/"}
-  ];
+  const [experience, setExperience] = useState([]);
   useEffect(() => {
-
+    const getExperience = async () => {
+        const response = await ExperienceService.getExperience();
+        let tmp = response.data.data;
+        tmp.forEach(v => {
+            v.period_start = Dates.formatDate(v.period_start);
+            v.period_end = Dates.formatDate(v.period_end);
+        });
+        setExperience(tmp);
+    };
+    getExperience();
   }, []);
   const header = {
     gradient: "Camino profesional",
@@ -26,13 +36,18 @@ function Experience() {
               gap={8}
             >
               {
+                experience.length > 0 ?
                 experience.map((v, k) => {
                   return(
                     <GridItem key={k}>
                       <CardPeriod data={v} />
                     </GridItem>
                   )
-                })
+                }) : 
+                <Fragment>
+                  <CardPeriodLoading />
+                  <CardPeriodLoading />
+                </Fragment>
               }
             </Grid>
           </Box>

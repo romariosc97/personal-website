@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Text, Grid, GridItem, Image, Link } from "@chakra-ui/react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navigation/Navbar";
 import Breadcrumb from "../components/Breadcrumb";
 import Footer from "../components/Footer";
 import Certifications from "../components/Certifications";

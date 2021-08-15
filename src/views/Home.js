@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Text, Flex, Grid, GridItem } from "@chakra-ui/react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navigation/Navbar";
 import Footer from "../components/Footer";
 import Certifications from "../components/Certifications";
 import { faWindowRestore, faFileAlt } from '@fortawesome/free-regular-svg-icons';

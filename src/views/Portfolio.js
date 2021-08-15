@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Box, Text, Grid, GridItem, Image, Skeleton } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navigation/Navbar";
 import Footer from "../components/Footer";
 import Breadcrumb from "../components/Breadcrumb";
 import FlipMove from 'react-flip-move';

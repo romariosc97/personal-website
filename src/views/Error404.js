@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Box, Text } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navigation/Navbar";
 import Footer from "../components/Footer";
 
 function Error404() {

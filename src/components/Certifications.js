@@ -38,8 +38,8 @@ function Certifications() {
                             <Skeleton w={'8rem'} height="8rem" />
                             <Skeleton rounded="full" w={'8rem'} height="8rem" />
                             <Skeleton w={'16rem'} height="4rem" />
-                            <Skeleton w={'8rem'} height="8rem" />
                             <Skeleton rounded="full" w={'8rem'} height="8rem" />
+                            <Skeleton w={'8rem'} height="8rem" />
                         </Fragment>
                     }
                 </Box>

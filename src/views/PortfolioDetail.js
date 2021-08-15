@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Box, Grid, GridItem, Text, List, ListItem, Image, Divider } from "@chakra-ui/react";
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navigation/Navbar";
 import Footer from "../components/Footer";
 import Breadcrumb from "../components/Breadcrumb";
 import ButtonRouter  from "../components/navigation/ButtonRouter";
