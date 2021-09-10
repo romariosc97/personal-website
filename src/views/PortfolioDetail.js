@@ -9,7 +9,6 @@ import Breadcrumb from "../components/Breadcrumb";
 import ButtonRouter  from "../components/navigation/ButtonRouter";
 
 import PortfolioService from "../services/PortfolioService";
-import { API_URL } from "../config/";
 
 function PortfolioDetail() {
     const { id } = useParams();
@@ -118,7 +117,7 @@ function PortfolioDetail() {
                         {
                             images.map((v, k) => {
                                 return (
-                                    <Image key={k} rounded="lg" my="2rem" src={API_URL + v.image} alt={v.name} />
+                                    <Image key={k} rounded="lg" my="2rem" src={process.env.REACT_APP_API_URL + v.image} alt={v.name} />
                                 )
                             })
                         }

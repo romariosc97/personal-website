@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function getCertifications(){
-    return axios.get(`http://localhost:8000/api/certification`);
+    return axios.get(`${process.env.REACT_APP_API_URL}api/certification`);
 }
 
 const CertificationService = {

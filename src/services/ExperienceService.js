@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function getExperience(){
-    return axios.get(`http://localhost:8000/api/experience`);
+    return axios.get(`${process.env.REACT_APP_API_URL}api/experience`);
 }
 
 const ExperienceService = {

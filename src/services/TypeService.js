@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function getTypes(){
-    return axios.get(`http://localhost:8000/api/type`);
+    return axios.get(`${process.env.REACT_APP_API_URL}api/type`);
 }
 
 const TypeService = {

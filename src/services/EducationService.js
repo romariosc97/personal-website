@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function getEducation(){
-    return axios.get(`http://localhost:8000/api/education`);
+    return axios.get(`${process.env.REACT_APP_API_URL}api/education`);
 }
 
 const EducationService = {
