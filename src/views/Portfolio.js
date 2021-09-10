@@ -9,6 +9,7 @@ import SectionHeader from "../components/SectionHeader";
 
 import PortfolioService from "../services/PortfolioService";
 import TypeService from "../services/TypeService";
+import { API_URL } from "../config/";
 
 function Portfolio() {
     const header = {
@@ -80,7 +81,7 @@ function Portfolio() {
                             return (
                                 <Link to={"/portfolio/" + v.id} key={k}>
                                     <Box className="overlay-portfolio">
-                                        <Image rounded="lg" height="250px" width="100%" objectFit="cover" src={process.env.PUBLIC_URL + "/projects/" + v.image} alt={v.name} />
+                                        <Image rounded="lg" height="250px" width="100%" objectFit="cover" src={API_URL + v.image} alt={v.name} />
                                         <Box className="text fadeIn-bottom" display="flex" alignItems="center" justifyContent="center" flexDirection="column" textAlign="justify">
                                             <Text px="1.5rem" fontSize="2xl" fontWeight="700" textTransform="uppercase">{v.name}</Text>
                                             <Text px="1.5rem" fontSize="lg" fontWeight="300">{v.short_description}</Text>

@@ -3,6 +3,7 @@ import { Box, Image, Link, Skeleton } from "@chakra-ui/react";
 import SectionHeader from "../components/SectionHeader";
 
 import CertificationService from "../services/CertificationService";
+import { API_URL } from "../config/";
 
 function Certifications() {
     const [certifications, setCertificacions] = useState([]);
@@ -29,7 +30,7 @@ function Certifications() {
                             return(
                                 <Box key={k} w={'8rem'}>
                                     <Link target="_blank" href={v.url}>
-                                        <Image w="100%" src={process.env.PUBLIC_URL + "/certifications/" + v.image} alt={v.name} />
+                                        <Image w="100%" src={API_URL + v.image} alt={v.name} />
                                     </Link>
                                 </Box>
                             )
