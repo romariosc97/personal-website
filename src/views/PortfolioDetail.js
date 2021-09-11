@@ -117,7 +117,7 @@ function PortfolioDetail() {
                         {
                             images.map((v, k) => {
                                 return (
-                                    <Image key={k} rounded="lg" my="2rem" src={process.env.REACT_APP_API_URL + v.image} alt={v.name} />
+                                    <Image key={k} rounded="lg" my="2rem" mx="auto" src={process.env.REACT_APP_API_URL + v.image} alt={v.name} />
                                 )
                             })
                         }

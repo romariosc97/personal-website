@@ -28,7 +28,7 @@ function Certifications() {
                         certifications.map((v, k) => {
                             return(
                                 <Box key={k} w={'8rem'}>
-                                    <Link target="_blank" href={v.url}>
+                                    <Link _focus={{boxShadow: "none"}} target="_blank" href={v.url}>
                                         <Image w="100%" src={process.env.REACT_APP_API_URL + v.image} alt={v.name} />
                                     </Link>
                                 </Box>
